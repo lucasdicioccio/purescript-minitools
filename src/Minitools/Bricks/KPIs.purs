@@ -1,4 +1,8 @@
-
+-- A brick for making a row of KPI items with a title and a value. Each item is clickable.
+--
+-- the Props type is parameterized by action and type of item
+-- the Props type contains an array of `kpis` items
+-- each item contains a `name` and a `value` strings, the `item` itself and an `onClick` handler
 module Minitools.Bricks.KPIs
   ( Props
   , Item

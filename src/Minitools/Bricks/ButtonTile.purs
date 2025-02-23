@@ -1,5 +1,7 @@
-
--- | A 128x128 tile button.
+-- A brick for making 128x128 large square HTML Buttons
+--
+-- the Props type is parameterized by action slot and effect monad
+-- the Props type contains a `contents` (whole HTML sub component), the `action` to trigger on clicking, a `disabled` boolean to prevent or allow clicks, and an `info` tooltip
 module Minitools.Bricks.ButtonTile
   ( Props
   , render

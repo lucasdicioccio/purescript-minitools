@@ -1,3 +1,14 @@
+-- A brick for making HTML menus as styled in Bulma
+-- See https://bulma.io/documentation/components/menu/ for the menu.
+--
+-- the Props type is parameterized by action, slot, effect monad and type of item
+-- the module defines utility types MenuRow and Item
+-- - MenuRow is a sumtype do distinguish between menu labels (unclickable separators) and proper item arrays
+-- - an Item contains a rendered `contents`, the `datum` object itself, an `onClick` handler, and `subItems` as a children array
+-- the Props type then contains an array of MenuRow named `items`, and an `isActive` predicate function which tells if a given MenuRow is active or not based on the datum
+--
+-- Note that even though the type allows for has many nesting levels one can
+-- imagine, the Bulma component contains at most two levels.
 module Minitools.Bricks.Menu
   ( Props
   , MenuRow(..)

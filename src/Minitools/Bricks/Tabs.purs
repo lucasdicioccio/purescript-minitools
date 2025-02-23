@@ -1,4 +1,10 @@
-
+-- A brick for making a HTML tabs as an ul/li/a nesting.
+-- 
+-- Leverages the tabs class from https://bulma.io/documentation/components/tabs/ bulma.
+--
+-- the Props type is parameterized by action, slot, effect monad and type of item
+-- the Props type contains a `tabs` array of Tab item and an `isActive` predicate based on the tab to decide if a tab is active or not
+-- each Tab item contains a `contents` sub-component representing the title of the tab, a `datum`, and an `onClick` event-handler mapping the datum into an action
 module Minitools.Bricks.Tabs
   ( Props
   , Tab

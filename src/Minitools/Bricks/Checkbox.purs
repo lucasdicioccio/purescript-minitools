@@ -1,4 +1,7 @@
-
+-- A brick for making HTML checkboxes.
+--
+-- the Props type is parameterized by action slot and effect monad
+-- the Props type contains a `contents` (whole HTML sub component) which is rendered aside the checkbox, the `onChecked` action to map the boolean checked-status of the checkbox
 module Minitools.Bricks.Checkbox
   ( Props
   , render

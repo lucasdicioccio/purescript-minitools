@@ -1,4 +1,8 @@
-
+-- A brick for making HTML Buttons
+--
+-- the Props type is parameterized by action
+-- the Props type contains a `text` (show on the button), the `action` to trigger on clicking, a `disabled` boolean to prevent or allow clicks, and an `info` tooltip
+-- an additional mode Props2 exists which also get a `classes` array of ClassName
 module Minitools.Bricks.ActionButton (
     Props
   , render

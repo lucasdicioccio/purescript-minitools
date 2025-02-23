@@ -1,5 +1,19 @@
-
--- | SearchPopup where the items are clickable (checkboxes) selections.
+-- A brick for making a selection in a popup and out of many items.
+-- A text input allows to filter the display among items.
+--
+-- The brick is a specialized SearchPopup with Checkbox-decorated items.
+--
+-- the Props type is parameterized by item type, action, slot and effect monad
+-- the Props type contains a `title` string for the menu
+--   - a list of all selectable `items`
+--   - a `searchString` which contains the state of the current text filter
+--   - a `matchItem` predicate based on the searchString and individual items controls whether to show an item or not.
+--   - a `renderItem` function allows to tune the sub-component
+--   - an `activeItem` predicate tells whether an item is selected or not
+--   - an `onSearch` handler turns changes of text filter into an action
+--   - an `onChecked` handler turns the wanted selected/unselected state of an item into an action
+--   - an `renderNotFound` sub-component allow to display a placeholder when nothing is found
+--   - a `title` string, a `menuClass` string and a `menuIcon` sub-component are all passed to SearchPopup
 module Minitools.Bricks.SetSearchSelector
   ( Props
   , render

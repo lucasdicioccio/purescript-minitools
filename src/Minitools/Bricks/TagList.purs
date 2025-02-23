@@ -1,4 +1,9 @@
-
+-- A brick for making a HTML list of tags.
+--
+-- Leverages tags from bulma https://bulma.io/documentation/elements/tag/ .
+--
+-- the Props type is parameterized by action, slot, effect monad and type of item
+-- the Props type contains an array `items` of item, a `contents` function to turn an item into a sub-component, an `onDelete` function mapping items and returning an optional action, if the returned action is non-empty then a "delete button" is appended to the tag
 module Minitools.Bricks.TagList
   ( Props
   , render

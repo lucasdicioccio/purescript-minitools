@@ -1,4 +1,4 @@
-
+-- A named list of UTF-8 emoji strings.
 module Minitools.Bricks.Emojis where
 
 backward :: String

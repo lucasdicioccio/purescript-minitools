@@ -1,4 +1,11 @@
-
+-- A brick for making HTML message boxes.
+--
+-- See https://bulma.io/documentation/components/message/ for bulma messages.
+--
+-- the Props type is parameterized by action, slot and effect monad
+-- the Props type contains a `level` for the message importance, a `main` string for the title of the message, and a `details` object
+-- the level of the message is a sum-type for error, notice, and success
+-- the details object, is a sum-type for when no-detail is given, a simple textual string is given, or when a proper sub-component is given
 module Minitools.Bricks.Message
   ( Props
   , MessageLevel(..)

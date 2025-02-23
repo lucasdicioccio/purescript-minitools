@@ -1,4 +1,7 @@
-
+-- A brick for making HTML Selects
+--
+-- the Props type is parameterized by action and by the contained `item`
+-- the Props type contains a `text` (shown on the selector), an `items` list, a `disabled` boolean to allow/disallow modifications, and a pair of function `option` mapping an item to a rendered text, and an `action` to map the selected item into an action
 module Minitools.Bricks.ActionSelector
   ( Props
   , render
@@ -13,9 +16,9 @@ import Halogen.HTML.Properties as HP
 
 type Props item a =
   { text :: String
+  , items :: List.List item
   , option :: item -> String
   , action :: item -> a
-  , items :: List.List item
   , disabled :: Boolean
   }
 

@@ -1,3 +1,10 @@
+-- A brick for making HTML pop-up buttons.
+--
+-- The main use for this module is to provide buttons for PopupMenu but you can use it standalone.
+-- See https://bulma.io/documentation/components/dropdown/ for the button
+--
+-- the Props type is parameterized by action slot and effect monad
+-- the Props type contains a `title` string, an `extraClass` string (for instance to add `is-small`), an `icon` sub-component, and an `onClick` optional action
 module Minitools.Bricks.PopupButton
   ( Props
   , render

@@ -1,3 +1,7 @@
+-- A brick for making round-CSS-style color dots.
+--
+-- the Props type has no parameters
+-- the Props type contains a stringly-typed CSS `color`, a `shap` (which is a sum type but contains only Circle), and an integer size
 module Minitools.Bricks.ColorDot (dot, Shape(..), CssColor, CssSize, Props) where
 
 import Prelude ((<>), show)

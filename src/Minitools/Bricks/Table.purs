@@ -1,4 +1,25 @@
-
+-- A brick for making interactive and dynamic HTML tables.
+--
+-- This bricks is a somewhat powerful table.
+-- A table contains items along columns, that is rows represent a collection of information of same nature whereas column project items across many different dimensions.
+-- The table header will have two levels, one with column names and one with column contents (e.g., to contain buttons)
+--
+-- the Props type is parameterized by action, slot, effect monad and type of item
+-- the component defines a Column type
+-- Column defines how to display a given item in a given dimension, it contains
+-- - a `name` which serve as title in the table header
+-- - a `colgrp` array of properties as table colgroups (e.g., to add classes or spans)
+-- - a `column` sub-component used as table sub-header
+-- - a `cell` function mapping an item into a sub-component used as the table cell
+--
+-- the Props type has
+-- - an `items` array of items (corresponding to rows in the table)
+-- - a `template` field with an array defining every Column
+-- - a `rowClass` function allow to specialize the HTML class of a given row
+--
+-- The rendering lays-out every row by applying the colums in the same order as the template and by applying the rows in the same order as the items. That is, ordering and filtering should be done outside of this table.
+--
+-- Helpers allow to render the table header or table body separately.
 module Minitools.Bricks.Table
   ( render
   , Props

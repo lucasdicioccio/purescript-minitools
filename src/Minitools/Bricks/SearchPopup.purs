@@ -1,3 +1,9 @@
+-- A brick for making filterable menus inside popups.
+--
+-- The brick is a specialized MenuPopup with a search input as first item.
+--
+-- the Props type is parameterized by item type, action, slot and effect monad
+-- the Props type contains a string `title` for the menu, an `onSearch` handler taking the searched string as input, an array `foundItems` for the items to display, and a `renderItem` function to turn an item into an array of sub-components
 module Minitools.Bricks.SearchPopup
   ( Props
   , render
